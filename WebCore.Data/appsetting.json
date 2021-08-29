@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnectionString": "Data Source=DESKTOP-VC4KFV7;Initial Catalog=DatabaseCore;User ID=sa;Password=123;Pooling=False"
+  }
+}
