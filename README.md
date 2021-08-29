@@ -7,3 +7,5 @@
 - Microsoft.EntityFrameworkCore.SqlServer
 - Microsoft.EntityFrameworkCore.SqlServer.Design
 - Microsoft.EntityFrameworkCore.Tools
+- Product : Category (N-N)
+- Order : OrderDetail (1-N)

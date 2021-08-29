@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebCore.Data.Entities
 {
-    class ProductInCategory
+    public class ProductInCategory
     {
         public int ProductId { get; set; }
 

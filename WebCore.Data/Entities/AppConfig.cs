@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebCore.Data.Entities
 {
-    class AppConfig
+    public class AppConfig
     {
         public string Key { get; set; }
 

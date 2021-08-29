@@ -16,5 +16,18 @@ namespace WebCore.Data.Entities
         public DateTime DateCreated { get; set; }
         public string SeoAlias { get; set; }
 
+        // N - N : Category
+        public List<ProductInCategory> ProductInCategories { get; set; }
+
+        // 1 - N : OrderDetail
+        public List<OrderDetail> OrderDetails { get; set; }
+
+        // N - N : language
+
+        public List<ProductTranslation> ProductTranslations { get; set; }
+
+        // 
+        public List<Cart> Carts { get; set; }
+
     }
 }

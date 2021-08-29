@@ -18,6 +18,8 @@ namespace WebCore.Data.Entities
         public string ShipPhoneNumber { set; get; }
         public OrderStatus Status { set; get; }
 
+
+        // 1 - N: OrderDetail
         public List<OrderDetail> OrderDetails { get; set; }
     }
 }

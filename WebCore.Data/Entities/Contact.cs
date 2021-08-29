@@ -7,7 +7,7 @@ using WebCore.Data.Enums;
 
 namespace WebCore.Data.Entities
 {
-    class Contact
+    public class Contact
     {
         public int Id { set; get; }
         public string Name { set; get; }

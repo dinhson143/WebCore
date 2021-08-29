@@ -7,7 +7,7 @@ using WebCore.Data.Enums;
 
 namespace WebCore.Data.Entities
 {
-    class Transaction
+    public class Transaction
     {
         public int Id { set; get; }
         public DateTime TransactionDate { set; get; }
