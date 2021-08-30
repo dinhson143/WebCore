@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebCore.Data.EF;
 
 namespace WebCore.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210830021403_AspNetCoreIdentityDatabase")]
+    partial class AspNetCoreIdentityDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -81,22 +83,15 @@ namespace WebCore.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<System.Guid>", b =>
                 {
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("RoleId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("UserId", "RoleId");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("RoleId", "UserId");
 
                     b.ToTable("UserRole");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = new Guid("b38060f2-8b1c-47ae-80aa-2cf1b518b812"),
-                            RoleId = new Guid("0d5b7850-46c1-4c80-99c4-d94fc38a3ea7")
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
@@ -477,7 +472,7 @@ namespace WebCore.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2021, 8, 30, 9, 53, 10, 614, DateTimeKind.Local).AddTicks(1667),
+                            DateCreated = new DateTime(2021, 8, 30, 9, 14, 2, 789, DateTimeKind.Local).AddTicks(5949),
                             OriginalPrice = 100000m,
                             Price = 200000m,
                             Stock = 0,
@@ -648,16 +643,6 @@ namespace WebCore.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Roles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("0d5b7850-46c1-4c80-99c4-d94fc38a3ea7"),
-                            ConcurrencyStamp = "7aea8ac9-7520-4df0-b1e6-e0ff6d4fd53e",
-                            Description = "Adminstrator Role ",
-                            Name = "admin",
-                            NormalizedName = "admin"
-                        });
                 });
 
             modelBuilder.Entity("WebCore.Data.Entities.Transaction", b =>
@@ -767,27 +752,6 @@ namespace WebCore.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("b38060f2-8b1c-47ae-80aa-2cf1b518b812"),
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "4c96cd6b-83bc-4812-be1f-47cd796179d9",
-                            Dob = new DateTime(1999, 3, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "dinhson14399@gmail.com",
-                            EmailConfirmed = true,
-                            FirstName = "Dinh",
-                            LastName = "Son",
-                            LockoutEnabled = false,
-                            NormalizedEmail = "dinhson14399@gmail.com",
-                            NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEOc4HKZ8raHK0fKzDiv2Xubq9FaXBuoLs6TAmvwnRmPqKnISORE4FMpCFgRdTIRBvw==",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "",
-                            TwoFactorEnabled = false,
-                            UserName = "admin"
-                        });
                 });
 
             modelBuilder.Entity("WebCore.Data.Entities.Cart", b =>

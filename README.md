@@ -1,4 +1,4 @@
-#{git config --global http.sslverify "false"}
+﻿#{git config --global http.sslverify "false"}
 
 ## Techologies
 - ASP.NET 5
@@ -7,5 +7,4 @@
 - Microsoft.EntityFrameworkCore.SqlServer
 - Microsoft.EntityFrameworkCore.SqlServer.Design
 - Microsoft.EntityFrameworkCore.Tools
-- Product : Category (N-N)
-- Order : OrderDetail (1-N)
+- Guid kiểu duy nhất cho toàn hệ thống

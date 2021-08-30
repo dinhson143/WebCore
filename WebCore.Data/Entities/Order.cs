@@ -21,5 +21,7 @@ namespace WebCore.Data.Entities
 
         // 1 - N: OrderDetail
         public List<OrderDetail> OrderDetails { get; set; }
+
+        public User User { get; set; }
     }
 }
