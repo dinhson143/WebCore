@@ -18,5 +18,7 @@ namespace WebCore.Data.Entities
         public Product Product { get; set; }
 
         public DateTime DateCreated { get; set; }
+
+        public User User { get; set; }
     }
 }
