@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using WebCore.Application.Catalog.Products;
+using WebCore.Application.Common;
 using WebCore.Data.EF;
 using WebCore.Utilities.Constants;
 
@@ -26,7 +27,10 @@ namespace WebCore.BackendApi
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString(SystemContants.ConnectionString)));
 
+            // Declare DI
             services.AddTransient<IPublicProductService, PublicProductService>();
+            services.AddTransient<IManageProductService, ManageProductService>();
+            services.AddTransient<IStorageService, FileStorageService>();
 
             // swagger
             services.AddSwaggerGen(c=>

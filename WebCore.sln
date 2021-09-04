@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebCore", "WebCore\WebCore.csproj", "{5FD2076D-017B-4B07-83F1-81977F29038B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AF023E3D-E9C5-4538-AF89-CC5BE1A67E64}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Solution Items", "0. Solution Items", "{AF023E3D-E9C5-4538-AF89-CC5BE1A67E64}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
@@ -18,7 +18,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebCore.Utilities", "WebCor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebCore.ViewModels", "WebCore.ViewModels\WebCore.ViewModels.csproj", "{7E7E71C6-CC5C-41B5-81B1-573357DF23DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCore.BackendApi", "WebCore.BackendApi\WebCore.BackendApi.csproj", "{65736FEC-73AC-4081-A64A-F36AD830DEA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebCore.BackendApi", "WebCore.BackendApi\WebCore.BackendApi.csproj", "{65736FEC-73AC-4081-A64A-F36AD830DEA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Structure", "1.Structure", "{4994A98A-A196-42E3-9EC6-D60D17B855BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Domain", "2. Domain", "{862AB55F-3959-4EC2-8776-5DB4CA1B8943}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Hosts", "3. Hosts", "{195EC952-48A5-4144-B0E8-41B7BAAA6BDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +59,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5FD2076D-017B-4B07-83F1-81977F29038B} = {195EC952-48A5-4144-B0E8-41B7BAAA6BDE}
+		{A3C15283-B30D-47D2-A308-0C2ABD67B9D0} = {862AB55F-3959-4EC2-8776-5DB4CA1B8943}
+		{0645AD3D-F734-4159-BC83-2509E67A03AC} = {862AB55F-3959-4EC2-8776-5DB4CA1B8943}
+		{D172B748-1436-4B7F-B372-C8F00B4B7048} = {4994A98A-A196-42E3-9EC6-D60D17B855BC}
+		{7E7E71C6-CC5C-41B5-81B1-573357DF23DD} = {4994A98A-A196-42E3-9EC6-D60D17B855BC}
+		{65736FEC-73AC-4081-A64A-F36AD830DEA5} = {195EC952-48A5-4144-B0E8-41B7BAAA6BDE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A27791B0-EA50-43C6-A5F3-9E9EAA90C330}

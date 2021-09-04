@@ -17,4 +17,8 @@
     <ProjectReference Include="..\WebCore.ViewModels\WebCore.ViewModels.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\user-content\" />
+  </ItemGroup>
+
 </Project>
