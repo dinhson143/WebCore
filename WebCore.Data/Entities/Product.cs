@@ -28,5 +28,8 @@ namespace WebCore.Data.Entities
         // 
         public List<Cart> Carts { get; set; }
 
+        //
+        public List<ProductImage> ProductImages { get; set; }
+
     }
 }

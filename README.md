@@ -8,3 +8,4 @@
 - Microsoft.EntityFrameworkCore.SqlServer.Design
 - Microsoft.EntityFrameworkCore.Tools
 - Guid kiểu duy nhất cho toàn hệ thống
+- Dtos: Data transfer object

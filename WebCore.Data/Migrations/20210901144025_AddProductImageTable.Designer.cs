@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebCore.Data.EF;
 
 namespace WebCore.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210901144025_AddProductImageTable")]
+    partial class AddProductImageTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -488,7 +490,7 @@ namespace WebCore.Data.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2021, 9, 1, 22, 59, 55, 500, DateTimeKind.Local).AddTicks(1146),
+                            DateCreated = new DateTime(2021, 9, 1, 21, 40, 24, 886, DateTimeKind.Local).AddTicks(9898),
                             OriginalPrice = 100000m,
                             Price = 200000m,
                             Stock = 0,
@@ -505,21 +507,19 @@ namespace WebCore.Data.Migrations
                         .HasAnnotation("SqlServer:IdentitySeed", 1)
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Caption")
-                        .IsRequired()
+                    b.Property<int>("Caption")
                         .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
 
-                    b.Property<long>("FileSize")
-                        .HasColumnType("bigint");
+                    b.Property<int>("FileSize")
+                        .HasColumnType("int");
 
-                    b.Property<string>("ImagePath")
-                        .IsRequired()
+                    b.Property<int>("ImagePath")
                         .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsDefault")
                         .HasColumnType("bit");
@@ -705,7 +705,7 @@ namespace WebCore.Data.Migrations
                         new
                         {
                             Id = new Guid("0d5b7850-46c1-4c80-99c4-d94fc38a3ea7"),
-                            ConcurrencyStamp = "f923d4bf-c43f-4061-9130-9ce0c2579c7f",
+                            ConcurrencyStamp = "10653122-6981-468c-818a-f64692678d51",
                             Description = "Adminstrator Role ",
                             Name = "admin",
                             NormalizedName = "admin"
@@ -825,7 +825,7 @@ namespace WebCore.Data.Migrations
                         {
                             Id = new Guid("b38060f2-8b1c-47ae-80aa-2cf1b518b812"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "6989a653-8ba2-45cb-9abd-96c2abf3b188",
+                            ConcurrencyStamp = "6cffe155-61ec-46d6-823c-7eda9d420cb7",
                             Dob = new DateTime(1999, 3, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "dinhson14399@gmail.com",
                             EmailConfirmed = true,
@@ -834,7 +834,7 @@ namespace WebCore.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "dinhson14399@gmail.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAELpIYzTrwnjb3lPxIxRyoTOKreRvJkl7beG6UYFGnzG8kAu1uHdipd9BbV94UqllMw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEiog1k+4ujAlWiN3FRiP3tpM404Ssen5xkFZxWqSb3ozsU//9o8evz4onNzcTmFXg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
