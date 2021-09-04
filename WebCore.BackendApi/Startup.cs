@@ -58,6 +58,8 @@ namespace WebCore.BackendApi
 
             app.UseAuthorization();
 
+
+            //swagger
             app.UseSwagger();
 
             app.UseSwaggerUI(c =>
