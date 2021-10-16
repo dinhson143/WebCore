@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WebCore.Data.Configurations;
 using WebCore.Data.Entities;
+using WebCore.Data.Extensions;
 
 namespace WebCore.Data.EF
 {
@@ -12,6 +13,8 @@ namespace WebCore.Data.EF
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+            // Configure Fluent API
             modelBuilder.ApplyConfiguration(new AppConfigConfiguration());
             modelBuilder.ApplyConfiguration(new CartConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
@@ -26,6 +29,8 @@ namespace WebCore.Data.EF
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
 
+            // Data seeding
+            modelBuilder.Seed();
             //base.OnModelCreating(modelBuilder);
         }
 
